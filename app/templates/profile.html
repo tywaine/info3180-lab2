@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block main %}
+    <div class="container-lg">
+        <img id="profileImage" src="{{ url_for('static', filename='img/profile-pic1.jpg') }}" alt="Profile Picture" class="img-thumbnail">
+        <h1 id="fullName" class="text-white">{{ name }}</h1>
+        <h3 id="username" class="text-white-50">@mjane</h3>
+        <h3 id="location" class="text-white-50">Kingston, Jamaica</h3>
+        <h3 id="dateJoined" class="text-white-50">{{ date }}</h3>
+    </div>
+    <div class="container-md">
+        <p id="bio" class="lead">I am a web developer living in Kingston, Jamaica.</p>
+        <div id="stats">
+            <div class="stat">
+                <h3>7</h3>
+                <p>Posts</p>
+            </div>
+            <div class="stat">
+                <h3>100</h3>
+                <p>Following</p>
+            </div>
+            <div class="stat">
+                <h3>100</h3>
+                <p>Followers</p>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary">Follow</button>
+    </div>
+{% endblock %}
